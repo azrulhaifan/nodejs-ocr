@@ -28,7 +28,8 @@ async function main(req, res) {
         } catch (error) {
             res.send({
                 success: false,
-                message: "OCR Failed"
+                message: "OCR Failed",
+                data: error
             });
         }
     }
