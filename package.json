@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-ocr",
+  "version": "1.0.0",
+  "description": "OCR using Tesseract & NodeJS + Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Azrul Haifan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-tesseract-ocr": "^2.2.1"
+  }
+}
