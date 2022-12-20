@@ -4,9 +4,9 @@ var express = require('express'),
 var apiRoutes = require('./api-routes/api');
 
 router
-  // Add a binding to handle '/tests'
+  // Add a binding to handle '/'
   .get('/', function(req, res){
-    res.send("Hello")
+    res.send("There is Nothing Here !")
   })
 
   // Import my automated routes into the path '/api'
