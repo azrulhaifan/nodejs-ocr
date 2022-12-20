@@ -7,12 +7,7 @@ const hard_port = 18127
 const host = process.env.HOST || hard_host
 const port = parseInt(process.env.PORT ?? hard_port)
 
-app.listen('app.sock', () => {
-  app.currentServer = {
-		host: host ? host : "127.0.0.1",
-		port: port,
-	};
-
+app.listen(process.env.PORT, () => {
   console.log(`Voia running on port http://${host}:${port}`)
 })
 
