@@ -1,3 +1,4 @@
 !.gitignore
 .env
+*.trained*
 node_modules/*
