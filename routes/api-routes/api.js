@@ -3,6 +3,7 @@ var express = require('express'),
     router = express.Router();
 const bodyParser = require('body-parser');
 const ocr = require('../../modules/ocr');
+const ocr_js = require('../../modules/ocr-js');
 
 router.use(function(req, res, next) {
   if (req.header('x-api-key') != process.env.APIKEY) {
@@ -26,5 +27,6 @@ router
     });
   })
   .post('/ocr', ocr.do_ocr)
+  .post('/ocr-js', ocr_js.do_ocr_js)
 
 module.exports = router;
