@@ -1,5 +1,6 @@
 const tesseract = require("node-tesseract-ocr")
 
+// HARDCODED OCR CONFIGURATION
 const config = {
   lang: "eng", // default
   oem: 3,
@@ -14,8 +15,9 @@ async function main(req, res) {
         });
     } else {
         try {
+            let ocr_config = req.body.ocr_config;
             let image_url = req.body.image_url;
-            let ocr_text = await tesseract.recognize(image_url);
+            let ocr_text = await tesseract.recognize(image_url, ocr_config);
 
             res.send({
                 success: true,
